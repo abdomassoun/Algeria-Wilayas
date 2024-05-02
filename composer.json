@@ -1,0 +1,15 @@
+{
+    "name": "abdo/algeria-wilayas",
+    "description": "first package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abdomassoun",
+            "email": "abdemassoune@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    }
+}
