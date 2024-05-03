@@ -23,7 +23,7 @@ class AlgWilaya extends Model
 {
     use HasFactory;
 
-    protected $table = 'alg__wilayas';
+    protected $table = 'alg_wilayas';
 
     protected $fillable = [
         'name',

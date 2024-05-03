@@ -1,6 +1,4 @@
 <?php
-
-use Abdo\AlgeriaWilaya\Services\AlgeriaWilayaService;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alg__wilayas', function (Blueprint $table) {
+        Schema::create('alg_wilayas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('code');
@@ -23,11 +21,6 @@ return new class extends Migration
             $table->string('longitude');
             $table->timestamps();
         });
-
-        
-        AlgeriaWilayaService::seedWilayas();        
-        
-
     }
 
     /**
@@ -37,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alg__wilayas');
+        Schema::dropIfExists('alg_wilayas');
     }
 };
