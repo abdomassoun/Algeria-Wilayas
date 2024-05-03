@@ -29,8 +29,8 @@ class AlgeriaWilayasProvider extends ServiceProvider{
      */
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/config/AlgeriaWilayas.php', 'AlgeriaWilayas'
-        );
+        // $this->mergeConfigFrom(
+        //     __DIR__.'/config/AlgeriaWilayas.php', 'AlgeriaWilayas'
+        // );
     }
 }
