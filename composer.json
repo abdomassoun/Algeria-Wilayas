@@ -9,10 +9,6 @@
             "email": "abdemassoune@gmail.com"
         }
     ],
-    "require": {
-        "php": ">=8.2",
-        "another-vendor/package": "1.*"
-    },
     "minimum-stability": "dev",
     "require-dev": {
         "orchestra/testbench": "^9.0",
@@ -26,6 +22,16 @@
     "autoload-dev": {
         "psr-4": {
             "Abdo\\AlgeriaWilayas\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abdo\\AlgeriaWilayas\\AlgeriaWilayasServiceProvider"
+            ]
         }
     }
 }
