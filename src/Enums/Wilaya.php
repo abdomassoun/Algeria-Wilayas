@@ -36,9 +36,9 @@ enum Wilaya: int
      *
      * @return string The code of the Wilaya.
      */
-    public function getCode(): string
+    public static function getCode(int $Wilaya_code): string
     {
-        return AlgeriaWilayaService::getValueOf($this->value, 'code');
+        return AlgeriaWilayaService::getValueOf($Wilaya_code, 'code');
     }
 
     /**
@@ -47,7 +47,7 @@ enum Wilaya: int
      * @param int $Wilaya_code The code of the Wilaya.
      * @return string The name of the Wilaya.
      */
-    public function getName(int $Wilaya_code): string
+    public static function getName(int $Wilaya_code): string
     {
         return AlgeriaWilayaService::getValueOf($Wilaya_code, 'name');
     }
@@ -58,7 +58,7 @@ enum Wilaya: int
      * @param int $willaya_code The code of the Wilaya.
      * @return string The Arabic name of the Wilaya.
      */
-    public function getArabicName(int $willaya_code): string
+    public static function getArabicName(int $willaya_code): string
     {
         return AlgeriaWilayaService::getValueOf($willaya_code, 'arabic_name');
     }
@@ -69,7 +69,7 @@ enum Wilaya: int
      * @param int $willaya_code The code of the Wilaya.
      * @return string The longitude of the Wilaya.
      */
-    public function getLongitude(int $willaya_code): string
+    public static function getLongitude(int $willaya_code): string
     {
         return AlgeriaWilayaService::getValueOf($willaya_code, 'longitude');
     }
@@ -80,7 +80,7 @@ enum Wilaya: int
      * @param int $willaya_code The code of the Wilaya.
      * @return string The latitude of the Wilaya.
      */
-    public function getLatitude(int $willaya_code): string
+    public static function getLatitude(int $willaya_code): string
     {
         return AlgeriaWilayaService::getValueOf($willaya_code, 'latitude');
     }
