@@ -10,6 +10,17 @@
         }
     ],
     "require-dev": {
-        "orchestra/testbench": "^9.0"
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^11.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abdo\\AlgeriaWilayas\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abdo\\AlgeriaWilayas\\Tests\\": "tests/"
+        }
     }
 }
