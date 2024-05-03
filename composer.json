@@ -30,7 +30,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Abdo\\AlgeriaWilayas\\AlgeriaWilayasServiceProvider"
+                "Abdo\\AlgeriaWilayas\\AlgeriaWilayasProvider"
             ]
         }
     }
