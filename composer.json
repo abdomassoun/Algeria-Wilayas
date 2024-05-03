@@ -9,6 +9,11 @@
             "email": "abdemassoune@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=8.2",
+        "another-vendor/package": "1.*"
+    },
+    "minimum-stability": "dev",
     "require-dev": {
         "orchestra/testbench": "^9.0",
         "phpunit/phpunit": "^11.1"
