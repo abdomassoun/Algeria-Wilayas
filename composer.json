@@ -17,7 +17,8 @@
     "autoload": {
         "psr-4": {
             "Abdo\\AlgeriaWilayas\\": "src/",
-            "Abdo\\AlgeriaWilayas\\Seeders\\": "src/seeders/"
+            "Abdo\\AlgeriaWilayas\\Seeders\\": "src/seeders/",
+            "Abdo\\AlgeriaWilayas\\Services\\": "src/services/"
         }
     },
     "autoload-dev": {

@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace Abdo\AlgeriaWilaya\Services;
 
-use Illuminate\Support\Facades\DB;
+use Abdo\AlgeriaWilayas\Models\Wilaya as ModelsWilaya;
 
 class AlgeriaWilayaService
 {
@@ -11,12 +11,13 @@ class AlgeriaWilayaService
      *
      * @return array The data from the JSON file.
      */
-    private function getFromJson(){
+    public function getFromJson()
+    {
         $json = file_get_contents(__DIR__ . '/../../data/Wilaya_Of_Algeria.json');
         $data = json_decode($json, true);
         return $data;
     }
-    
+
     /**
      * Get the value of a specific field for a given code.
      *
@@ -36,24 +37,25 @@ class AlgeriaWilayaService
         }
         return $value;
     }
-    
+
     /**
      * Seed the wilayas table with data from the JSON file.
      *
      * @return void
      */
-    public static function seedWilayas(){
+    public static function seedWilayas()
+    {
         $data = Self::getFromJson();
-        foreach ($data as $item) {
-            DB::table('alg__wilayas')->insert([
-                'name' => $item['name'],
-                'code' => $item['code'],
-                'arabic_name' => $item['arabic_name'],
-                'latitude' => $item['latitude'],
-                'longitude' => $item['longitude'],
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
+        foreach ($data as $wilaya => $value) {
+            ModelsWilaya::create(
+                [
+                    'name' => $value['name'],
+                    'code' => $value['code'],
+                    'arabic_name' => $value['arabic_name'],
+                    'latitude' => $value['latitude'],
+                    'longitude' => $value['longitude'],
+                ]
+            );
         }
     }
 }

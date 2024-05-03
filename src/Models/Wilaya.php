@@ -19,11 +19,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  */
-class AlgWilaya extends Model
+class Wilaya extends Model
 {
     use HasFactory;
 
-    protected $table = 'alg_wilayas';
+    protected $table = 'wilayas';
 
     protected $fillable = [
         'name',

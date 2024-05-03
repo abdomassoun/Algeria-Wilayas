@@ -7,7 +7,7 @@ use Abdo\AlgeriaWilaya\Services\AlgeriaWilayaService;
 /**
  * Represents the enumeration of Wilayas (provinces) in Algeria.
  */
-enum Wilaya: int
+enum WilayaEnum: int
 {
     /**
      * Adrar province.
