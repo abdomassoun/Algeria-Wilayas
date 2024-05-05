@@ -1,6 +1,6 @@
 {
     "name": "abdomassoun/algeria-wilayas",
-    "description": "first package",
+    "description": "This package is designed to help Laravel developers integrate wilayas data into their projects in the easiest way possible. It includes an enum of wilayas and provides the ability to create a table that includes all the data of wilayas with their information (optional to create a table of wilayas). It also includes a Wilaya model (class).    ",
     "type": "library",
     "license": "MIT",
     "authors": [
