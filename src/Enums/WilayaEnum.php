@@ -84,4 +84,17 @@ enum WilayaEnum: int
     {
         return AlgeriaWilayaService::getValueOf($willaya_code, 'latitude');
     }
+    /**
+     * Retrieves all the Wilayas.
+     *
+     * @return array An array of all the Wilayas.
+     */
+    public static function all(): array
+    {
+        $wilayas = [];
+        for ($i = 1; $i <= 58; $i++) {
+            $wilayas[] = self::getName($i);
+        }
+        return $wilayas;
+    }
 }

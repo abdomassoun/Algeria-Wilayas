@@ -4,7 +4,7 @@ namespace Abdo\AlgeriaWilaya\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use Abdo\AlgeriaWilaya\Services\AlgeriaWilayaService;
+use Abdo\AlgeriaWilayas\Models\Wilaya;
 use Illuminate\Database\Seeder;
 
 class AlgeriaWilayaSeeder extends Seeder
@@ -14,6 +14,18 @@ class AlgeriaWilayaSeeder extends Seeder
      */
     public function run(): void
     {
-        AlgeriaWilayaService::seedWilayas();
+        $json = file_get_contents(__DIR__ . '/../../storage/data/Wilaya_Of_Algeria.json');
+        $data = json_decode($json, true);
+        foreach ($data as $wilaya => $value) {
+            Wilaya::create(
+                [
+                    'name' => $value['name'],
+                    'code' => $value['code'],
+                    'arabic_name' => $value['arabic_name'],
+                    'latitude' => $value['latitude'],
+                    'longitude' => $value['longitude'],
+                ]
+            );
+        }
     }
 }

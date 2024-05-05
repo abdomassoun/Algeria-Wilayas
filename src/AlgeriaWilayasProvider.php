@@ -16,12 +16,12 @@ class AlgeriaWilayasProvider extends ServiceProvider{
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__.'/migrations');
-        // $this->publishes([
-        //     __DIR__.'/data/Wilaya_Of_Algeria.json' => base_path('resources/data/Wilaya_Of_Algeria.json'),
-        // ]);
-        
+        $this->publishes([
+            __DIR__.'/data/Wilaya_Of_Algeria.json' => base_path('storage/data/Wilaya_Of_Algeria.json'),
+            __DIR__.'/seeders/AlgeriaWilayaSeeder.php' => database_path('seeders/AlgeriaWilayaSeeder.php'),
+        ], 'seeders');
     }
-    
+
     /**
      * Register any application services.
      *
@@ -29,8 +29,5 @@ class AlgeriaWilayasProvider extends ServiceProvider{
      */
     public function register()
     {
-        // $this->mergeConfigFrom(
-        //     __DIR__.'/config/AlgeriaWilayas.php', 'AlgeriaWilayas'
-        // );
     }
 }
